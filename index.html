@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./filemodel-directive.js"></script>
+    <script src="./filereader-service.js"></script>
+    <script src="./uploader-controller.js"></script>
+    <title></title>
+</head>
+<body ng-app="app">
+<div class="container" ng-controller="UploaderController">
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            上传图片
+        </div>
+        <div class="panel-body">
+            <!--<button class="btn btn-success">上传图片</button>-->
+            <div class="container">
+                <input type="file" file-model="myFile"/>
+                <div class="col-md-12">
+                    <img ng-src="{{imageSrc}}" style="max-width:300px;max-height:300px;margin:0 auto;display:block;" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
